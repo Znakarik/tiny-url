@@ -25,7 +25,17 @@ public class ConvertFunctions {
         return urlPOJOS;
     };
 
-    public static Function<ResultSet, UrlPOJO> FROM_RESULT_SET_TO_URL = ConvertFunctions::createUrlFromResultSet;
+    public static Function<ResultSet, UrlPOJO> FROM_RESULT_SET_TO_URL = resultSet -> {
+        try {
+            if (resultSet.next()) {
+                return createUrlFromResultSet(resultSet);
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    };
 
     public static Function<ResultSet, List<UrlRedirectPOJO>> FROM_RESULT_SET_TO_REDIRECTS = resultSet -> {
         List<UrlRedirectPOJO> result = new ArrayList<>();
@@ -43,7 +53,6 @@ public class ConvertFunctions {
 
     private static UrlPOJO createUrlFromResultSet(ResultSet resultSet) {
         try {
-            resultSet.next();
             String shortUrl = resultSet.getString("short_url");
             String longUrl = resultSet.getString("long_url");
             String id = resultSet.getString("id");

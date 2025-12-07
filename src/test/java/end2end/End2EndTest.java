@@ -12,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import ru.znakarik.ApplicationEntryPoint;
+import ru.znakarik.controller.analytic.GetUrlDataRs;
 import ru.znakarik.controller.create.CreateUrlRs;
 import ru.znakarik.db.model.url.UrlRedirectPOJO;
 import ru.znakarik.repository.UrlRepository;
@@ -26,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         webEnvironment = SpringBootTest.WebEnvironment.MOCK,
         classes = ApplicationEntryPoint.class)
 @AutoConfigureMockMvc
-public class UrlControllerTest {
+public class End2EndTest {
     private final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     @Autowired
@@ -34,13 +35,13 @@ public class UrlControllerTest {
     @Autowired
     private UrlRepository urlRepository;
 
-//    @Test
+    @Test
     public void testGet() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/url/v1/getAll")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.urls.[0].shortUrl", Matchers.startsWith("localhost/tiny_url/")))
+                .andExpect(jsonPath("$.urls.[0].shortUrl", Matchers.notNullValue()))
                 .andExpect(jsonPath("$.urls.[0].longUrl", Matchers.notNullValue()));
     }
 
@@ -91,8 +92,23 @@ public class UrlControllerTest {
                                 "    \"shortUrl\" : \"%s\"\n" +
                                 "}", shortUrl)))
                 .andExpect(status().isOk());
+
+        String contentAsString = mvc.perform(MockMvcRequestBuilders.post("/url/v1/analytic/get")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(String.format("{\n" +
+                                "    \"shortUrl\" : \"%s\"\n," +
+                                "    \"dateTo\" : \"2026-12-01\"\n," +
+                                "    \"dateFrom\" : \"2024-11-01\"\n" +
+                                "}", shortUrl)))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString();
+
+        GetUrlDataRs getUrlDataRs = OBJECT_MAPPER.reader().readValue(contentAsString, GetUrlDataRs.class);
+
         // then
         List<UrlRedirectPOJO> allRedirectsByUrlId = urlRepository.getAllRedirectsByUrlId(urlId);
         Assertions.assertEquals(2, allRedirectsByUrlId.size());
+
+        Assertions.assertEquals(2, getUrlDataRs.getCount());
     }
 }

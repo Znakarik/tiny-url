@@ -6,10 +6,7 @@ import ru.znakarik.db.model.url.jpa.DBConnector;
 import ru.znakarik.db.model.url.jpa.DBConnectorImpl;
 import ru.znakarik.repository.PostgreUrlRepository;
 import ru.znakarik.repository.UrlRepository;
-import ru.znakarik.service.UrlGeneratorService;
-import ru.znakarik.service.UrlGeneratorServiceImpl;
-import ru.znakarik.service.UrlService;
-import ru.znakarik.service.UrlServiceImpl;
+import ru.znakarik.service.*;
 
 @Configuration
 public class UrlConfiguration {
@@ -18,6 +15,11 @@ public class UrlConfiguration {
     public UrlService urlService(UrlRepository urlRepository,
                                  UrlGeneratorService urlGeneratorService) {
         return new UrlServiceImpl(urlRepository, urlGeneratorService);
+    }
+
+    @Bean
+    public UrlAnalyticService urlAnalyticService(UrlRepository urlRepository) {
+        return new UrlAnalyticServiceImpl(urlRepository);
     }
 
     @Bean

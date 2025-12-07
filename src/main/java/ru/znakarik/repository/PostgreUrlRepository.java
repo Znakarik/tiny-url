@@ -28,7 +28,10 @@ public class PostgreUrlRepository implements UrlRepository {
     @Override
     public Optional<UrlPOJO> findUrlById(String id) {
         try {
-            UrlPOJO execute = dbConnector.execute(String.format("SELECT * FROM urls where id = '%s';", id), ConvertFunctions.FROM_RESULT_SET_TO_URL);
+            UrlPOJO execute = dbConnector.execute(
+                    String.format("SELECT * FROM urls where id = '%s';", id),
+                    ConvertFunctions.FROM_RESULT_SET_TO_URL
+            );
             return Optional.ofNullable(execute);
         } catch (SQLException e) {
             throw new RuntimeException(e);

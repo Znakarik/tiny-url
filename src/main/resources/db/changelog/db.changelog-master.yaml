@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - include:
+        file: db/changelog/clear.db.sql
+  - include:
+        file: db/changelog/db.changelog-1.0.sql
+  - include:
+        file: db/changelog/populate.db.sql
+

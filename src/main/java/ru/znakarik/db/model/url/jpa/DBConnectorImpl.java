@@ -16,9 +16,8 @@ public class DBConnectorImpl implements DBConnector {
     public <T> T execute(String sql, Function<ResultSet, T> processResultFunction) {
         log.info("[execute statement] = {}", sql);
         Optional<ResultSet> result = executeSql(sql);
-            if (result.isPresent()) {
-                return processResultFunction.apply(result.get());
-            } else return null;
+        return result.map(processResultFunction)
+                .orElse(null);
     }
 
     private Optional<ResultSet> executeSql(String sql) {
