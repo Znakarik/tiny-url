@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,7 +12,7 @@ import java.util.Date;
 @Builder
 @Getter
 @ToString
-public class UrlPOJO {
+public class UrlPOJO implements Serializable {
     public static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
 
     private final Date createDateTime;
@@ -20,3 +21,4 @@ public class UrlPOJO {
     private final String longUrl;
     private final Integer redirects;
 }
+

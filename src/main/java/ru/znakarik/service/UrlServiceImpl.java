@@ -27,7 +27,7 @@ public class UrlServiceImpl implements UrlService {
 
     @Override
     public List<UrlPOJO> getAll() {
-        Collection<UrlPOJO> all = urlRepository.getAll();
+        Collection<UrlPOJO> all = urlRepository.getAllUrls();
         return all.stream().toList();
     }
 
@@ -49,7 +49,8 @@ public class UrlServiceImpl implements UrlService {
 
     @Override
     public UrlPOJO getByShortUrl(String shortUrl) {
-        return urlRepository.findLongUrlByShortUrl(shortUrl);
+        return urlRepository.findLongUrlByShortUrl(shortUrl)
+                .orElseThrow(() -> new RuntimeException("Не найден url по shortUrl =" + shortUrl));
     }
 
     @Override

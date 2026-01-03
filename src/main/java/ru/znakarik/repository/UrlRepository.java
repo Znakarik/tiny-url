@@ -8,11 +8,12 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UrlRepository {
-    Collection<UrlPOJO> getAll();
+    Collection<UrlPOJO> getAllUrls();
+    Collection<UrlRedirectPOJO> getAllRedirects();
 
     Optional<UrlPOJO> findUrlById(String id);
 
-    UrlPOJO findLongUrlByShortUrl(String shortUrl);
+    Optional<UrlPOJO> findLongUrlByShortUrl(String shortUrl);
 
     String create(String id,
                   String longUrl,
@@ -23,5 +24,8 @@ public interface UrlRepository {
 
     List<UrlRedirectPOJO> getAllRedirectsByUrlId(String urlId);
 
-    void delete(String id);
+    void deleteUrl(String id);
+    void deleteRedirect(String redirectId);
+    void clearUrls();
+    void clearRedirects();
 }

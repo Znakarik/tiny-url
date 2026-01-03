@@ -17,7 +17,7 @@ public class PostgreUrlRepository implements UrlRepository {
     private final DBConnector dbConnector;
 
     @Override
-    public Collection<UrlPOJO> getAll() {
+    public Collection<UrlPOJO> getAllUrls() {
         try {
             return dbConnector.execute("SELECT * FROM urls;", ConvertFunctions.FROM_RESULT_SET_URLS_TO_URLS_DTO);
         } catch (SQLException e) {
@@ -39,10 +39,11 @@ public class PostgreUrlRepository implements UrlRepository {
     }
 
     @Override
-    public UrlPOJO findLongUrlByShortUrl(String shortUrl) {
+    public Optional<UrlPOJO> findLongUrlByShortUrl(String shortUrl) {
         String statement = String.format("SELECT * FROM urls where short_url = '%s'", shortUrl);
         try {
-            return dbConnector.execute(statement, ConvertFunctions.FROM_RESULT_SET_TO_URL);
+            UrlPOJO result = dbConnector.execute(statement, ConvertFunctions.FROM_RESULT_SET_TO_URL);
+            return Optional.ofNullable(result);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -90,7 +91,27 @@ public class PostgreUrlRepository implements UrlRepository {
     }
 
     @Override
-    public void delete(String id) {
+    public void deleteUrl(String id) {
+        throw new RuntimeException("Not implemented yet");
+    }
 
+    @Override
+    public void deleteRedirect(String redirectId) {
+        throw new RuntimeException("Not implemented yet");
+    }
+
+    @Override
+    public void clearUrls() {
+        throw new RuntimeException("Not implemented yet");
+    }
+
+    @Override
+    public void clearRedirects() {
+        throw new RuntimeException("Not implemented yet");
+    }
+
+    @Override
+    public Collection<UrlRedirectPOJO> getAllRedirects() {
+        throw new RuntimeException("Not implemented yet");
     }
 }

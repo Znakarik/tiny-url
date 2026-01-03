@@ -15,7 +15,8 @@ public class UrlAnalyticServiceImpl implements UrlAnalyticService {
 
     @Override
     public int getAllRedirectsByShortUrlAndDate(String shortUrl, Date from, Date to) {
-        UrlPOJO longUrlByShortUrl = urlRepository.findLongUrlByShortUrl(shortUrl);
+        UrlPOJO longUrlByShortUrl = urlRepository.findLongUrlByShortUrl(shortUrl)
+                .orElseThrow(() -> new RuntimeException("Не найден url по shortUrl =" + shortUrl));
         List<UrlRedirectPOJO> allRedirectsByUrlId = urlRepository.getAllRedirectsByUrlId(longUrlByShortUrl.getId());
         CompareRq compareRq = new CompareRq.CompareRqBuilder()
                 .from(from)

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.event.annotation.BeforeTestClass;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
@@ -34,6 +35,12 @@ public class End2EndTest {
     private MockMvc mvc;
     @Autowired
     private UrlRepository urlRepository;
+
+    @BeforeTestClass
+    public void setup() {
+        urlRepository.clearUrls();
+        urlRepository.clearRedirects();
+    }
 
     @Test
     public void testGet() throws Exception {
