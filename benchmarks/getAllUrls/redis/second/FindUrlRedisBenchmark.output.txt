@@ -1,0 +1,567 @@
+/Users/olga/Library/Java/JavaVirtualMachines/ms-17.0.15/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=49710 -Dfile.encoding=UTF-8 -classpath /Users/olga/IdeaProjects/tiny-url/target/test-classes:/Users/olga/IdeaProjects/tiny-url/target/classes:/Users/olga/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.4.5/spring-boot-starter-web-3.4.5.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot-starter/3.4.5/spring-boot-starter-3.4.5.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot/3.4.5/spring-boot-3.4.5.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.4.5/spring-boot-autoconfigure-3.4.5.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.4.5/spring-boot-starter-logging-3.4.5.jar:/Users/olga/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar:/Users/olga/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar:/Users/olga/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar:/Users/olga/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar:/Users/olga/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar:/Users/olga/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.4.5/spring-boot-starter-json-3.4.5.jar:/Users/olga/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.3/jackson-databind-2.18.3.jar:/Users/olga/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.3/jackson-annotations-2.18.3.jar:/Users/olga/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.3/jackson-core-2.18.3.jar:/Users/olga/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.18.3/jackson-datatype-jdk8-2.18.3.jar:/Users/olga/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.18.3/jackson-datatype-jsr310-2.18.3.jar:/Users/olga/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.18.3/jackson-module-parameter-names-2.18.3.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.4.5/spring-boot-starter-tomcat-3.4.5.jar:/Users/olga/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.40/tomcat-embed-core-10.1.40.jar:/Users/olga/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.40/tomcat-embed-el-10.1.40.jar:/Users/olga/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.40/tomcat-embed-websocket-10.1.40.jar:/Users/olga/.m2/repository/org/springframework/spring-web/6.2.6/spring-web-6.2.6.jar:/Users/olga/.m2/repository/org/springframework/spring-beans/6.2.6/spring-beans-6.2.6.jar:/Users/olga/.m2/repository/io/micrometer/micrometer-observation/1.14.6/micrometer-observation-1.14.6.jar:/Users/olga/.m2/repository/io/micrometer/micrometer-commons/1.14.6/micrometer-commons-1.14.6.jar:/Users/olga/.m2/repository/org/springframework/spring-webmvc/6.2.6/spring-webmvc-6.2.6.jar:/Users/olga/.m2/repository/org/springframework/spring-aop/6.2.6/spring-aop-6.2.6.jar:/Users/olga/.m2/repository/org/springframework/spring-context/6.2.6/spring-context-6.2.6.jar:/Users/olga/.m2/repository/org/springframework/spring-expression/6.2.6/spring-expression-6.2.6.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.4.5/spring-boot-starter-data-jpa-3.4.5.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.4.5/spring-boot-starter-jdbc-3.4.5.jar:/Users/olga/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar:/Users/olga/.m2/repository/org/springframework/spring-jdbc/6.2.6/spring-jdbc-6.2.6.jar:/Users/olga/.m2/repository/org/hibernate/orm/hibernate-core/6.6.13.Final/hibernate-core-6.6.13.Final.jar:/Users/olga/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/olga/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/olga/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/Users/olga/.m2/repository/org/hibernate/common/hibernate-commons-annotations/7.0.3.Final/hibernate-commons-annotations-7.0.3.Final.jar:/Users/olga/.m2/repository/io/smallrye/jandex/3.2.0/jandex-3.2.0.jar:/Users/olga/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/olga/.m2/repository/net/bytebuddy/byte-buddy/1.15.11/byte-buddy-1.15.11.jar:/Users/olga/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/olga/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/olga/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/olga/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/olga/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/olga/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/olga/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/olga/.m2/repository/org/springframework/data/spring-data-jpa/3.4.5/spring-data-jpa-3.4.5.jar:/Users/olga/.m2/repository/org/springframework/data/spring-data-commons/3.4.5/spring-data-commons-3.4.5.jar:/Users/olga/.m2/repository/org/springframework/spring-orm/6.2.6/spring-orm-6.2.6.jar:/Users/olga/.m2/repository/org/springframework/spring-tx/6.2.6/spring-tx-6.2.6.jar:/Users/olga/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/Users/olga/.m2/repository/org/springframework/spring-aspects/6.2.6/spring-aspects-6.2.6.jar:/Users/olga/.m2/repository/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar:/Users/olga/.m2/repository/org/postgresql/postgresql/42.7.7/postgresql-42.7.7.jar:/Users/olga/.m2/repository/org/checkerframework/checker-qual/3.49.3/checker-qual-3.49.3.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.4.5/spring-boot-starter-test-3.4.5.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot-test/3.4.5/spring-boot-test-3.4.5.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.4.5/spring-boot-test-autoconfigure-3.4.5.jar:/Users/olga/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/olga/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/olga/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/olga/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/Users/olga/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/Users/olga/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/Users/olga/.m2/repository/org/assertj/assertj-core/3.26.3/assertj-core-3.26.3.jar:/Users/olga/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/Users/olga/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/olga/.m2/repository/org/junit/jupiter/junit-jupiter/5.11.4/junit-jupiter-5.11.4.jar:/Users/olga/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.4/junit-jupiter-api-5.11.4.jar:/Users/olga/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/olga/.m2/repository/org/junit/platform/junit-platform-commons/1.11.4/junit-platform-commons-1.11.4.jar:/Users/olga/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/olga/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.4/junit-jupiter-params-5.11.4.jar:/Users/olga/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.11.4/junit-jupiter-engine-5.11.4.jar:/Users/olga/.m2/repository/org/junit/platform/junit-platform-engine/1.11.4/junit-platform-engine-1.11.4.jar:/Users/olga/.m2/repository/org/mockito/mockito-core/5.14.2/mockito-core-5.14.2.jar:/Users/olga/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar:/Users/olga/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/olga/.m2/repository/org/mockito/mockito-junit-jupiter/5.14.2/mockito-junit-jupiter-5.14.2.jar:/Users/olga/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/olga/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/olga/.m2/repository/org/springframework/spring-core/6.2.6/spring-core-6.2.6.jar:/Users/olga/.m2/repository/org/springframework/spring-jcl/6.2.6/spring-jcl-6.2.6.jar:/Users/olga/.m2/repository/org/springframework/spring-test/6.2.6/spring-test-6.2.6.jar:/Users/olga/.m2/repository/org/xmlunit/xmlunit-core/2.10.0/xmlunit-core-2.10.0.jar:/Users/olga/.m2/repository/org/liquibase/liquibase-core/5.0.1/liquibase-core-5.0.1.jar:/Users/olga/.m2/repository/com/opencsv/opencsv/5.12.0/opencsv-5.12.0.jar:/Users/olga/.m2/repository/org/yaml/snakeyaml/2.3/snakeyaml-2.3.jar:/Users/olga/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/Users/olga/.m2/repository/org/apache/commons/commons-collections4/4.5.0/commons-collections4-4.5.0.jar:/Users/olga/.m2/repository/org/apache/commons/commons-text/1.14.0/commons-text-1.14.0.jar:/Users/olga/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/Users/olga/.m2/repository/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar:/Users/olga/.m2/repository/org/springframework/boot/spring-boot-starter-data-redis/3.4.5/spring-boot-starter-data-redis-3.4.5.jar:/Users/olga/.m2/repository/io/lettuce/lettuce-core/6.4.2.RELEASE/lettuce-core-6.4.2.RELEASE.jar:/Users/olga/.m2/repository/io/netty/netty-common/4.1.119.Final/netty-common-4.1.119.Final.jar:/Users/olga/.m2/repository/io/netty/netty-handler/4.1.119.Final/netty-handler-4.1.119.Final.jar:/Users/olga/.m2/repository/io/netty/netty-resolver/4.1.119.Final/netty-resolver-4.1.119.Final.jar:/Users/olga/.m2/repository/io/netty/netty-buffer/4.1.119.Final/netty-buffer-4.1.119.Final.jar:/Users/olga/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.119.Final/netty-transport-native-unix-common-4.1.119.Final.jar:/Users/olga/.m2/repository/io/netty/netty-codec/4.1.119.Final/netty-codec-4.1.119.Final.jar:/Users/olga/.m2/repository/io/netty/netty-transport/4.1.119.Final/netty-transport-4.1.119.Final.jar:/Users/olga/.m2/repository/io/projectreactor/reactor-core/3.7.5/reactor-core-3.7.5.jar:/Users/olga/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/olga/.m2/repository/org/springframework/data/spring-data-redis/3.4.5/spring-data-redis-3.4.5.jar:/Users/olga/.m2/repository/org/springframework/data/spring-data-keyvalue/3.4.5/spring-data-keyvalue-3.4.5.jar:/Users/olga/.m2/repository/org/springframework/spring-oxm/6.2.6/spring-oxm-6.2.6.jar:/Users/olga/.m2/repository/org/springframework/spring-context-support/6.2.6/spring-context-support-6.2.6.jar:/Users/olga/.m2/repository/org/openjdk/jmh/jmh-core/1.37/jmh-core-1.37.jar:/Users/olga/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/olga/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/Users/olga/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.37/jmh-generator-annprocess-1.37.jar benchmark.FindUrlRedisBenchmark
+# JMH version: 1.37
+# VM version: JDK 17.0.15, OpenJDK 64-Bit Server VM, 17.0.15+6-LTS
+# VM invoker: /Users/olga/Library/Java/JavaVirtualMachines/ms-17.0.15/Contents/Home/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=49710 -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: benchmark.FindUrlRedisBenchmark.RedisState.run
+
+# Run progress: 0,00% complete, ETA 00:01:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 19:05:45,692 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.18
+19:05:45,693 |-INFO in ch.qos.logback.classic.util.ContextInitializer@31704ff5 - Here is a list of configurators discovered as a service, by rank:
+19:05:45,693 |-INFO in ch.qos.logback.classic.util.ContextInitializer@31704ff5 -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
+19:05:45,693 |-INFO in ch.qos.logback.classic.util.ContextInitializer@31704ff5 - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
+19:05:45,693 |-INFO in ch.qos.logback.classic.util.ContextInitializer@31704ff5 - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
+19:05:45,696 |-INFO in ch.qos.logback.classic.util.ContextInitializer@31704ff5 - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 0 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+19:05:45,696 |-INFO in ch.qos.logback.classic.util.ContextInitializer@31704ff5 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+19:05:45,696 |-INFO in ch.qos.logback.classic.util.ContextInitializer@31704ff5 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+19:05:45,698 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+19:05:45,698 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+19:05:45,698 |-INFO in ch.qos.logback.classic.util.ContextInitializer@31704ff5 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 2 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+19:05:45,698 |-INFO in ch.qos.logback.classic.util.ContextInitializer@31704ff5 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+19:05:45,698 |-INFO in ch.qos.logback.classic.util.ContextInitializer@31704ff5 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+19:05:45,698 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+19:05:45,699 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/Users/olga/IdeaProjects/tiny-url/target/classes/logback.xml]
+19:05:45,738 |-INFO in ch.qos.logback.core.model.processor.TimestampModelHandler - Using current interpretation time, i.e. now, as time reference.
+19:05:45,742 |-INFO in ch.qos.logback.core.model.processor.TimestampModelHandler - Adding property to the context with key="bySecond" and value="2026-01-04T19-05.45" to the LOCAL scope
+19:05:45,743 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@67713d8d - value "" substituted for "${PID:-}"
+19:05:45,743 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+19:05:45,743 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
+19:05:45,746 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@67713d8d - value "/Users/olga/Downloads/logs/tiny-url-2026-01-04T19-05.45-.log" substituted for "/Users/olga/Downloads/logs/tiny-url-${bySecond}-${PID}.log"
+19:05:45,746 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:05:45,756 |-INFO in ch.qos.logback.core.FileAppender[FILE] - File property is set to [/Users/olga/Downloads/logs/tiny-url-2026-01-04T19-05.45-.log]
+19:05:45,756 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [Console]
+19:05:45,756 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+19:05:45,757 |-WARN in ch.qos.logback.core.ConsoleAppender[Console] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+19:05:45,757 |-WARN in ch.qos.logback.core.ConsoleAppender[Console] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+19:05:45,757 |-WARN in ch.qos.logback.core.ConsoleAppender[Console] - See also https://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+19:05:45,757 |-INFO in ch.qos.logback.core.ConsoleAppender[Console] - BEWARE: Writing to the console can be very slow. Avoid logging to the
+19:05:45,757 |-INFO in ch.qos.logback.core.ConsoleAppender[Console] - console in production environments, especially in high volume systems.
+19:05:45,757 |-INFO in ch.qos.logback.core.ConsoleAppender[Console] - See also https://logback.qos.ch/codes.html#slowConsole
+19:05:45,757 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+19:05:45,757 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+19:05:45,757 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Console] to Logger[ROOT]
+19:05:45,758 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [ru.znakarik] to DEBUG
+19:05:45,758 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@4e0139ec - End of configuration.
+19:05:45,758 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@ddb1eff - Registering current configuration as safe fallback point
+19:05:45,758 |-INFO in ch.qos.logback.classic.util.ContextInitializer@31704ff5 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 60 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+19:05:45,858 |-INFO in ch.qos.logback.core.model.processor.TimestampModelHandler - Using current interpretation time, i.e. now, as time reference.
+19:05:45,858 |-INFO in ch.qos.logback.core.model.processor.TimestampModelHandler - Adding property to the context with key="bySecond" and value="2026-01-04T19-05.45" to the LOCAL scope
+19:05:45,858 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@7f1aff0a - value "68165" substituted for "${PID:-}"
+19:05:45,858 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+19:05:45,858 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.FileAppender]
+19:05:45,859 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@7f1aff0a - value "/Users/olga/Downloads/logs/tiny-url-2026-01-04T19-05.45-68165.log" substituted for "/Users/olga/Downloads/logs/tiny-url-${bySecond}-${PID}.log"
+19:05:45,859 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:05:45,859 |-INFO in ch.qos.logback.core.FileAppender[FILE] - File property is set to [/Users/olga/Downloads/logs/tiny-url-2026-01-04T19-05.45-68165.log]
+19:05:45,859 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [Console]
+19:05:45,859 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+19:05:45,859 |-WARN in ch.qos.logback.core.ConsoleAppender[Console] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+19:05:45,859 |-WARN in ch.qos.logback.core.ConsoleAppender[Console] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+19:05:45,859 |-WARN in ch.qos.logback.core.ConsoleAppender[Console] - See also https://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+19:05:45,859 |-INFO in ch.qos.logback.core.ConsoleAppender[Console] - BEWARE: Writing to the console can be very slow. Avoid logging to the
+19:05:45,859 |-INFO in ch.qos.logback.core.ConsoleAppender[Console] - console in production environments, especially in high volume systems.
+19:05:45,859 |-INFO in ch.qos.logback.core.ConsoleAppender[Console] - See also https://logback.qos.ch/codes.html#slowConsole
+19:05:45,859 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+19:05:45,859 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@70e615cd - Propagating INFO level on Logger[ROOT] onto the JUL framework
+19:05:45,860 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+19:05:45,860 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [Console] to Logger[ROOT]
+19:05:45,860 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [ru.znakarik] to DEBUG
+19:05:45,860 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@70e615cd - Propagating DEBUG level on Logger[ru.znakarik] onto the JUL framework
+19:05:45,860 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@57d4ecbb - End of configuration.
+19:05:45,860 |-INFO in org.springframework.boot.logging.logback.SpringBootJoranConfigurator@51198a8c - Registering current configuration as safe fallback point
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+19:05:45.918 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.boot.SpringApplication - Starting application using Java 17.0.15 with PID 68165 (started by olga in /Users/olga/IdeaProjects/tiny-url)
+19:05:45.919 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.boot.SpringApplication - No active profile set, falling back to 1 default profile: "default"
+19:05:46.186 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+19:05:46.187 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:05:46.197 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+19:05:46.204 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+19:05:46.204 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:05:46.209 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+19:05:46.416 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+19:05:46.421 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+19:05:46.422 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19:05:46.422 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+19:05:46.443 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19:05:46.444 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 508 ms
+19:05:46.485 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.configuration.AutoloadedConfigurations instance liquibase.GlobalConfiguration
+19:05:46.486 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.configuration.AutoloadedConfigurations instance liquibase.integration.commandline.LiquibaseCommandLineConfiguration
+19:05:46.486 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.configuration.AutoloadedConfigurations instance liquibase.logging.core.DefaultLoggerConfiguration
+19:05:46.486 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.configuration.AutoloadedConfigurations instance liquibase.sql.SqlConfiguration
+19:05:46.487 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.configuration.AutoloadedConfigurations instance liquibase.parser.ChangeLogParserConfiguration
+19:05:46.487 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.configuration.AutoloadedConfigurations instance liquibase.analytics.configuration.AnalyticsArgs
+19:05:46.487 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.configuration.AutoloadedConfigurations instance liquibase.license.LicenseTrackingArgs
+19:05:46.488 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.configuration.AutoloadedConfigurations instance liquibase.database.core.MSSQLDatabase$SpecificConfiguration
+19:05:46.488 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found ConfigurationDefinitions in liquibase.GlobalConfiguration
+19:05:46.488 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found ConfigurationDefinitions in liquibase.integration.commandline.LiquibaseCommandLineConfiguration
+19:05:46.488 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found ConfigurationDefinitions in liquibase.logging.core.DefaultLoggerConfiguration
+19:05:46.488 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found ConfigurationDefinitions in liquibase.sql.SqlConfiguration
+19:05:46.488 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found ConfigurationDefinitions in liquibase.parser.ChangeLogParserConfiguration
+19:05:46.488 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found ConfigurationDefinitions in liquibase.analytics.configuration.AnalyticsArgs
+19:05:46.488 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found ConfigurationDefinitions in liquibase.license.LicenseTrackingArgs
+19:05:46.488 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found ConfigurationDefinitions in liquibase.database.core.MSSQLDatabase$SpecificConfiguration
+19:05:46.489 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.configuration.ConfigurationValueProvider instance liquibase.configuration.core.DeprecatedConfigurationValueProvider
+19:05:46.489 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.configuration.ConfigurationValueProvider instance liquibase.configuration.core.SystemPropertyValueProvider
+19:05:46.489 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.configuration.ConfigurationValueProvider instance liquibase.configuration.core.ScopeValueProvider
+19:05:46.489 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.configuration.ConfigurationValueProvider instance liquibase.configuration.core.EnvironmentValueProvider
+19:05:46.491 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.logging.LogService instance liquibase.logging.core.BufferedLogService
+19:05:46.491 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.logging.LogService instance liquibase.logging.core.CompositeLogService
+19:05:46.491 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.logging.LogService instance liquibase.logging.core.JavaLogService
+19:05:46.491 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.servicelocator.ServiceLocator instance liquibase.servicelocator.StandardServiceLocator
+19:05:46.499 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.shouldRun aka should.run found
+19:05:46.499 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.shouldRun is using the default value of true
+19:05:46.500 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:05:46.539 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@fa652b7
+19:05:46.539 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:05:46.542 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.jvm.ConnectionPatterns instance liquibase.database.jvm.JdbcConnectionPatterns
+19:05:46.545 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.CockroachDatabase
+19:05:46.546 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.DB2Database
+19:05:46.546 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.Db2zDatabase
+19:05:46.546 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.DerbyDatabase
+19:05:46.547 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.EnterpriseDBDatabase
+19:05:46.547 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.FirebirdDatabase
+19:05:46.547 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.H2Database
+19:05:46.547 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.HsqlDatabase
+19:05:46.548 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.InformixDatabase
+19:05:46.548 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.Ingres9Database
+19:05:46.549 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.MSSQLDatabase
+19:05:46.549 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.MariaDBDatabase
+19:05:46.550 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.MockDatabase
+19:05:46.550 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.MySQLDatabase
+19:05:46.550 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.OracleDatabase
+19:05:46.550 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.PostgresDatabase
+19:05:46.551 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.SQLiteDatabase
+19:05:46.551 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.SybaseASADatabase
+19:05:46.551 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.SybaseDatabase
+19:05:46.551 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.UnsupportedDatabase
+19:05:46.552 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.Database instance liquibase.database.core.SnowflakeDatabase
+19:05:46.556 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.database - Connected to olga@jdbc:postgresql://localhost:5432/tiny-url
+19:05:46.557 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.database - Setting auto commit to false from true
+19:05:46.567 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.executor.Executor instance liquibase.executor.jvm.JdbcExecutor
+19:05:46.567 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.executor.Executor instance liquibase.executor.jvm.SnowflakeJdbcExecutor
+19:05:46.569 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddAutoIncrementGenerator
+19:05:46.569 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddAutoIncrementGeneratorDB2
+19:05:46.569 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddAutoIncrementGeneratorHsqlH2
+19:05:46.569 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddAutoIncrementGeneratorInformix
+19:05:46.569 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddAutoIncrementGeneratorMySQL
+19:05:46.569 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddAutoIncrementGeneratorSQLite
+19:05:46.570 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddColumnGenerator
+19:05:46.570 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddColumnGeneratorDefaultClauseBeforeNotNull
+19:05:46.570 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddColumnGeneratorSQLite
+19:05:46.570 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddDefaultValueGenerator
+19:05:46.570 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddDefaultValueGeneratorDerby
+19:05:46.571 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddDefaultValueGeneratorHsqldb
+19:05:46.571 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddDefaultValueGeneratorInformix
+19:05:46.571 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddDefaultValueGeneratorMSSQL
+19:05:46.571 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddDefaultValueGeneratorMySQL
+19:05:46.571 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddDefaultValueGeneratorOracle
+19:05:46.572 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddDefaultValueGeneratorPostgres
+19:05:46.572 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddDefaultValueGeneratorSQLite
+19:05:46.572 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddDefaultValueGeneratorSybase
+19:05:46.572 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddDefaultValueGeneratorSybaseASA
+19:05:46.572 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddForeignKeyConstraintGenerator
+19:05:46.572 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddPrimaryKeyGenerator
+19:05:46.572 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddPrimaryKeyGeneratorInformix
+19:05:46.573 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddUniqueConstraintGenerator
+19:05:46.573 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddUniqueConstraintGeneratorInformix
+19:05:46.573 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AddUniqueConstraintGeneratorTDS
+19:05:46.573 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.AlterSequenceGenerator
+19:05:46.573 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.BatchDmlExecutablePreparedStatementGenerator
+19:05:46.573 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.ClearDatabaseChangeLogTableGenerator
+19:05:46.573 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CommentGenerator
+19:05:46.573 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CopyRowsGenerator
+19:05:46.573 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateDatabaseChangeLogLockTableGenerator
+19:05:46.574 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateDatabaseChangeLogTableGenerator
+19:05:46.574 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateDatabaseChangeLogTableGeneratorSybase
+19:05:46.574 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateIndexGenerator
+19:05:46.575 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateIndexGeneratorFirebird
+19:05:46.575 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateIndexGeneratorPostgres
+19:05:46.575 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateProcedureGenerator
+19:05:46.575 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateSequenceGenerator
+19:05:46.575 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateTableGenerator
+19:05:46.576 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateTableGeneratorInformix
+19:05:46.576 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateViewGenerator
+19:05:46.576 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateViewGeneratorInformix
+19:05:46.576 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DeleteGenerator
+19:05:46.576 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DropColumnGenerator
+19:05:46.576 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DropDefaultValueGenerator
+19:05:46.577 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DropForeignKeyConstraintGenerator
+19:05:46.577 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DropIndexGenerator
+19:05:46.577 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DropPrimaryKeyGenerator
+19:05:46.577 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DropProcedureGenerator
+19:05:46.577 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DropSequenceGenerator
+19:05:46.577 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DropTableGenerator
+19:05:46.577 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DropUniqueConstraintGenerator
+19:05:46.577 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DropViewGenerator
+19:05:46.578 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetNextChangeSetSequenceValueGenerator
+19:05:46.578 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetViewDefinitionGenerator
+19:05:46.578 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetViewDefinitionGeneratorDB2
+19:05:46.578 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetViewDefinitionGeneratorDerby
+19:05:46.578 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetViewDefinitionGeneratorFirebird
+19:05:46.578 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetViewDefinitionGeneratorHsql
+19:05:46.578 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetViewDefinitionGeneratorInformix
+19:05:46.578 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetViewDefinitionGeneratorMSSQL
+19:05:46.578 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetViewDefinitionGeneratorOracle
+19:05:46.578 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetViewDefinitionGeneratorPostgres
+19:05:46.579 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetViewDefinitionGeneratorSybase
+19:05:46.579 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetViewDefinitionGeneratorSybaseASA
+19:05:46.579 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InitializeDatabaseChangeLogLockTableGenerator
+19:05:46.579 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertDataChangeGenerator
+19:05:46.579 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertGenerator
+19:05:46.579 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertOrUpdateGeneratorDB2
+19:05:46.579 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertOrUpdateGeneratorH2
+19:05:46.580 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertOrUpdateGeneratorHsql
+19:05:46.580 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertOrUpdateGeneratorInformix
+19:05:46.580 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertOrUpdateGeneratorMSSQL
+19:05:46.580 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertOrUpdateGeneratorMySQL
+19:05:46.580 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertOrUpdateGeneratorOracle
+19:05:46.580 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertOrUpdateGeneratorPostgres
+19:05:46.580 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertOrUpdateGeneratorSQLite
+19:05:46.580 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertOrUpdateGeneratorSybaseASA
+19:05:46.580 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertSetGenerator
+19:05:46.581 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.LockDatabaseChangeLogGenerator
+19:05:46.581 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.MarkChangeSetRanGenerator
+19:05:46.581 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.ModifyDataTypeGenerator
+19:05:46.581 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.RawParameterizedSqlGenerator
+19:05:46.581 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.RawSqlGenerator
+19:05:46.581 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.ReindexGeneratorSQLite
+19:05:46.581 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.RemoveChangeSetRanStatusGenerator
+19:05:46.582 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.RenameColumnGenerator
+19:05:46.582 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.RenameSequenceGenerator
+19:05:46.582 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.RenameTableGenerator
+19:05:46.582 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.RenameViewGenerator
+19:05:46.582 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.ReorganizeTableGeneratorDB2
+19:05:46.582 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.RuntimeGenerator
+19:05:46.582 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.SelectFromDatabaseChangeLogGenerator
+19:05:46.582 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.SelectFromDatabaseChangeLogLockGenerator
+19:05:46.582 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.SetColumnRemarksGenerator
+19:05:46.583 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.SetNullableGenerator
+19:05:46.583 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.SetTableRemarksGenerator
+19:05:46.583 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.SetViewRemarksGenerator
+19:05:46.583 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.StoredProcedureGenerator
+19:05:46.583 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.TableIsEmptyGenerator
+19:05:46.583 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.TableRowCountGenerator
+19:05:46.583 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.TagDatabaseGenerator
+19:05:46.583 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.UnlockDatabaseChangeLogGenerator
+19:05:46.584 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.UpdateChangeSetChecksumGenerator
+19:05:46.584 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.UpdateChangeSetFilenameGenerator
+19:05:46.584 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.UpdateDataChangeGenerator
+19:05:46.584 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.UpdateGenerator
+19:05:46.584 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.CreateSequenceGeneratorSnowflake
+19:05:46.584 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DropDefaultValueGeneratorSnowflake
+19:05:46.584 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.DropProcedureGeneratorSnowflake
+19:05:46.584 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.InsertOrUpdateGeneratorSnowflake
+19:05:46.584 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.RenameTableGeneratorSnowflake
+19:05:46.584 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.RenameViewGeneratorSnowflake
+19:05:46.585 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.SetColumnRemarksGeneratorSnowflake
+19:05:46.585 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.SetTableRemarksGeneratorSnowflake
+19:05:46.585 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.sqlgenerator.SqlGenerator instance liquibase.sqlgenerator.core.GetViewDefinitionGeneratorSnowflake
+19:05:46.593 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  liquibase.database - Set default schema name to public
+19:05:46.593 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.liquibaseSchemaName aka liquibase.schemaName found
+19:05:46.594 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.supportPropertyEscaping aka enableEscaping found
+19:05:46.594 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.supportPropertyEscaping is using the default value of false
+19:05:46.599 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.ChangelogSyncCommandStep
+19:05:46.599 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.LpmCommandStep
+19:05:46.600 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.CalculateChecksumCommandStep
+19:05:46.600 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.FutureRollbackSqlCommandStep
+19:05:46.600 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.ChangelogSyncSqlCommandStep
+19:05:46.601 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.init.InitCopyCommandStep
+19:05:46.602 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.init.InitProjectCommandStep
+19:05:46.604 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.GenerateChangelogCommandStep
+19:05:46.605 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.RollbackCommandStep
+19:05:46.605 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.TagCommandStep
+19:05:46.605 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.ValidateCommandStep
+19:05:46.605 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.UnexpectedChangesetsCommandStep
+19:05:46.606 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.helpers.DbUrlConnectionArgumentsCommandStep
+19:05:46.607 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.helpers.ReferenceDbUrlConnectionCommandStep
+19:05:46.607 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.helpers.DatabaseChangelogCommandStep
+19:05:46.607 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.helpers.DiffOutputControlCommandStep
+19:05:46.607 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.helpers.ReferenceDatabaseOutputWriterCommandStep
+19:05:46.608 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.helpers.DbUrlConnectionCommandStep
+19:05:46.608 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.helpers.ShowSummaryArgument
+19:05:46.608 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.helpers.LockServiceCommandStep
+19:05:46.608 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.helpers.PreCompareCommandStep
+19:05:46.608 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.helpers.ChangeExecListenerCommandStep
+19:05:46.609 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.helpers.OutputWriterCommandStep
+19:05:46.609 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.helpers.DiffArgumentsCommandStep
+19:05:46.609 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.StatusCommandStep
+19:05:46.609 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.ChangelogSyncToTagSqlCommandStep
+19:05:46.609 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.MarkNextChangesetRanSqlCommandStep
+19:05:46.609 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.UpdateCountCommandStep
+19:05:46.610 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.UpdateTestingRollbackCommandStep
+19:05:46.610 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.UpdateCountSqlCommandStep
+19:05:46.610 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.DiffCommandStep
+19:05:46.611 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.UpdateToTagCommandStep
+19:05:46.611 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.ListLocksCommandStep
+19:05:46.611 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.SnapshotCommandStep
+19:05:46.612 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.HistoryCommandStep
+19:05:46.612 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.UpdateSqlCommandStep
+19:05:46.612 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.DropAllCommandStep
+19:05:46.612 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.DiffChangelogCommandStep
+19:05:46.613 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.RollbackCountSqlCommandStep
+19:05:46.613 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.FutureRollbackCountSqlCommandStep
+19:05:46.613 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.MarkNextChangesetRanCommandStep
+19:05:46.613 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.ClearChecksumsCommandStep
+19:05:46.613 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.InternalSnapshotCommandStep
+19:05:46.614 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.RollbackToDateCommandStep
+19:05:46.614 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.RollbackCountCommandStep
+19:05:46.614 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.SnapshotReferenceCommandStep
+19:05:46.614 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.RollbackSqlCommandStep
+19:05:46.614 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.UpdateToTagSqlCommandStep
+19:05:46.614 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.RollbackToDateSqlCommandStep
+19:05:46.614 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.ReleaseLocksCommandStep
+19:05:46.614 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.ChangelogSyncToTagCommandStep
+19:05:46.614 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.FutureRollbackFromTagSqlCommandStep
+19:05:46.615 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.TagExistsCommandStep
+19:05:46.615 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.StartH2CommandStep
+19:05:46.615 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.DbDocCommandStep
+19:05:46.615 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.ExecuteSqlCommandStep
+19:05:46.615 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.StopH2CommandStep
+19:05:46.615 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.command.CommandStep instance liquibase.command.core.UpdateCommandStep
+19:05:46.617 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.logging.mdc.MdcManager instance liquibase.logging.mdc.NoOpMdcManager
+19:05:46.620 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.strict found
+19:05:46.620 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.strict is using the default value of false
+19:05:46.622 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.changeExecListener found
+19:05:46.623 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.changeExecListener found
+19:05:46.623 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.changeExecListenerClass found
+19:05:46.623 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.changeExecListenerClass found
+19:05:46.623 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.changeExecListenerPropertiesFile found
+19:05:46.623 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.changeExecListenerPropertiesFile found
+19:05:46.624 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found 'liquibase.command.update.changelogFile' configuration of 'classpath:/db/changelog/db.changelog-master.yaml'
+    command argument 'changelogFile' of 'classpath:/db/changelog/db.changelog-master.yaml'
+19:05:46.624 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found 'liquibase.command.update.changelogParameters' configuration of 'liquibase.changelog.ChangeLogParameters@19ead4af'
+    command argument 'changelogParameters' of 'liquibase.changelog.ChangeLogParameters@19ead4af'
+19:05:46.624 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.contextFilter aka liquibase.command.update.contexts found
+19:05:46.625 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.contextFilter aka liquibase.command.contexts found
+19:05:46.625 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found 'liquibase.command.update.database' configuration of 'olga @ jdbc:postgresql://localhost:5432/tiny-url (Default Schema: public)'
+    command argument 'database' of 'olga @ jdbc:postgresql://localhost:5432/tiny-url (Default Schema: public)'
+19:05:46.625 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.databaseChangelog found
+19:05:46.625 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.databaseChangelog found
+19:05:46.626 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.defaultCatalogName found
+19:05:46.626 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.defaultCatalogName found
+19:05:46.626 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.defaultSchemaName found
+19:05:46.626 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.defaultSchemaName found
+19:05:46.626 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.driver found
+19:05:46.626 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.driver found
+19:05:46.627 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.driverPropertiesFile found
+19:05:46.627 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.driverPropertiesFile found
+19:05:46.627 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.labelFilter aka liquibase.command.update.labels found
+19:05:46.627 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.labelFilter aka liquibase.command.labels found
+19:05:46.627 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.password found
+19:05:46.627 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.password found
+19:05:46.628 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.showSummary found
+19:05:46.628 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.command.update.showSummary is using the default value of SUMMARY
+19:05:46.628 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.showSummary found
+19:05:46.628 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.command.showSummary is using the default value of SUMMARY
+19:05:46.628 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found 'liquibase.command.update.showSummaryOutput' configuration of 'LOG'
+    command argument 'showSummaryOutput' of 'LOG'
+19:05:46.628 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.skipDatabaseStep found
+19:05:46.628 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.command.update.skipDatabaseStep is using the default value of false
+19:05:46.629 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.skipDatabaseStep found
+19:05:46.629 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.command.skipDatabaseStep is using the default value of false
+19:05:46.629 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.updateNullChecksums found
+19:05:46.629 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.command.update.updateNullChecksums is using the default value of false
+19:05:46.629 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.updateNullChecksums found
+19:05:46.629 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.command.updateNullChecksums is using the default value of false
+19:05:46.629 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.url found
+19:05:46.629 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.url found
+19:05:46.629 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.update.username found
+19:05:46.630 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.command.username found
+19:05:46.630 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.command - Pipeline for command 'update: liquibase.command.core.helpers.DbUrlConnectionArgumentsCommandStep then liquibase.command.core.helpers.ShowSummaryArgument then liquibase.command.core.helpers.DbUrlConnectionCommandStep then liquibase.command.core.helpers.DatabaseChangelogCommandStep then liquibase.command.core.helpers.ChangeExecListenerCommandStep then liquibase.command.core.UpdateCommandStep
+19:05:46.630 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.outputFile found
+19:05:46.630 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.outputFileEncoding found
+19:05:46.630 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.outputFileEncoding is using the default value of UTF-8
+19:05:46.630 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.command - Writing output with encoding 'UTF-8'
+19:05:46.631 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.command - Executing internal command dbUrlConnectionArguments
+19:05:46.631 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.command - Executing internal command showSummary
+19:05:46.631 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.command.update.showSummary is using the default value of SUMMARY
+19:05:46.631 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.command.showSummary is using the default value of SUMMARY
+19:05:46.631 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.command - Executing internal command dbUrlConnectionCommandStep
+19:05:46.631 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.command.update.skipDatabaseStep is using the default value of false
+19:05:46.631 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.command.skipDatabaseStep is using the default value of false
+19:05:46.632 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.liquibaseCatalogName aka liquibase.catalogName found
+19:05:46.632 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.license.tracking.enabled aka liquibase.license.utility.enabled found
+19:05:46.632 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.license.tracking.enabled is using the default value of false
+19:05:46.633 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.command - Executing internal command changelogCommandStep
+19:05:46.636 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.parser.ChangeLogParser instance liquibase.parser.core.formattedsql.FormattedSqlChangeLogParser
+19:05:46.638 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.parser.ChangeLogParser instance liquibase.parser.core.json.JsonChangeLogParser
+19:05:46.639 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.parser.ChangeLogParser instance liquibase.parser.core.sql.SqlChangeLogParser
+19:05:46.640 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.validateXmlChangelogFiles found
+19:05:46.640 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.validateXmlChangelogFiles is using the default value of true
+19:05:46.641 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.secureParsing found
+19:05:46.641 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.secureParsing is using the default value of true
+19:05:46.641 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.parser.ChangeLogParser instance liquibase.parser.core.xml.XMLChangeLogSAXParser
+19:05:46.641 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.parser.ChangeLogParser instance liquibase.parser.core.yaml.YamlChangeLogParser
+19:05:46.641 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.parser - Matched file 'classpath:/db/changelog/db.changelog-master.yaml' to parser 'YamlChangeLogParser'
+19:05:46.658 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.preserveClasspathPrefixInNormalizedPaths found
+19:05:46.658 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.preserveClasspathPrefixInNormalizedPaths is using the default value of false
+19:05:46.666 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.fileEncoding found
+19:05:46.666 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.fileEncoding is using the default value of UTF-8
+19:05:46.666 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.parser - Matched file 'db/changelog/clear.db.sql' to parser 'SqlChangeLogParser'
+19:05:46.668 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.changeset.ChangeSetService instance liquibase.changeset.StandardChangeSetService
+19:05:46.669 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.CatalogSnapshotGenerator
+19:05:46.670 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.ColumnSnapshotGenerator
+19:05:46.670 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.ColumnSnapshotGeneratorH2
+19:05:46.671 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.ColumnSnapshotGeneratorInformix
+19:05:46.671 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.ColumnSnapshotGeneratorOracle
+19:05:46.671 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.DataSnapshotGenerator
+19:05:46.672 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.ForeignKeySnapshotGenerator
+19:05:46.672 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.IndexSnapshotGenerator
+19:05:46.673 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.PrimaryKeySnapshotGenerator
+19:05:46.673 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.SchemaSnapshotGenerator
+19:05:46.673 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.SequenceSnapshotGenerator
+19:05:46.673 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.TableSnapshotGenerator
+19:05:46.674 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.UniqueConstraintSnapshotGenerator
+19:05:46.674 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.ViewSnapshotGenerator
+19:05:46.674 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.SchemaSnapshotGeneratorSnowflake
+19:05:46.674 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.SequenceSnapshotGeneratorSnowflake
+19:05:46.674 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.snapshot.SnapshotGenerator instance liquibase.snapshot.jvm.UniqueConstraintSnapshotGeneratorSnowflake
+19:05:46.674 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.supportsMethodValidationLevel found
+19:05:46.674 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.supportsMethodValidationLevel is using the default value of WARN
+19:05:46.676 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.util - Computed checksum for 1767542746676 as c46cd1cf968dcf8e9153f31bcfe8eae0
+19:05:46.678 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.preserveSchemaCase found
+19:05:46.678 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.preserveSchemaCase is using the default value of false
+19:05:46.684 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.database.LiquibaseTableNames instance liquibase.database.StandardLiquibaseTableNames
+19:05:46.691 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.diff.compare.DatabaseObjectComparator instance liquibase.diff.compare.core.CatalogComparator
+19:05:46.691 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.diff.compare.DatabaseObjectComparator instance liquibase.diff.compare.core.ColumnComparator
+19:05:46.691 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.diff.compare.DatabaseObjectComparator instance liquibase.diff.compare.core.DefaultDatabaseObjectComparator
+19:05:46.691 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.diff.compare.DatabaseObjectComparator instance liquibase.diff.compare.core.ForeignKeyComparator
+19:05:46.692 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.diff.compare.DatabaseObjectComparator instance liquibase.diff.compare.core.IndexComparator
+19:05:46.692 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.diff.compare.DatabaseObjectComparator instance liquibase.diff.compare.core.PrimaryKeyComparator
+19:05:46.692 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.diff.compare.DatabaseObjectComparator instance liquibase.diff.compare.core.SchemaComparator
+19:05:46.692 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.diff.compare.DatabaseObjectComparator instance liquibase.diff.compare.core.TableComparator
+19:05:46.692 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.diff.compare.DatabaseObjectComparator instance liquibase.diff.compare.core.UniqueConstraintComparator
+19:05:46.693 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.includeCatalogInSpecification found
+19:05:46.693 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.includeCatalogInSpecification is using the default value of false
+19:05:46.694 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.changelog.ChangeLogHistoryService instance liquibase.changelog.MockChangeLogHistoryService
+19:05:46.696 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.changelog.ChangeLogHistoryService instance liquibase.changelog.StandardChangeLogHistoryService
+19:05:46.697 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  liquibase.changelog - Reading from public.databasechangelog
+19:05:46.700 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.executor - Changelog query completed.
+19:05:46.708 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.executor - Changelog query completed.
+19:05:46.709 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.parser - Matched file 'db/changelog/db.changelog-1.0.sql' to parser 'SqlChangeLogParser'
+19:05:46.714 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.parser - Matched file 'db/changelog/populate.db.sql' to parser 'SqlChangeLogParser'
+19:05:46.719 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Found 'liquibase.command.update.updateNullChecksums' configuration of 'true'
+    command argument 'updateNullChecksums' of 'true'
+19:05:46.721 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.lockservice.LockService instance liquibase.lockservice.LockServiceImpl
+19:05:46.721 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.lockservice.LockService instance liquibase.lockservice.MockLockService
+19:05:46.721 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.lockservice.LockService instance liquibase.lockservice.OfflineLockService
+19:05:46.721 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.lockservice.LockService instance liquibase.lockservice.StandardLockService
+19:05:46.723 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.executor - Changelog query completed.
+19:05:46.724 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.allowDuplicatedChangesetIdentifiers found
+19:05:46.724 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.allowDuplicatedChangesetIdentifiers is using the default value of false
+19:05:46.725 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.changelog.visitor.ValidatingVisitorGenerator instance liquibase.changelog.visitor.StandardValidatingVisitorGenerator
+19:05:46.729 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.util - Computed checksum for inputStream as ce70fbefc0795675b5cd07134506c726
+19:05:46.732 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.util - Computed checksum for 9:ce70fbefc0795675b5cd07134506c726: as 6a2453978b12c5192401e30fdeb16d71
+19:05:46.732 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.util - Computed checksum for inputStream as 0b84965780b822360f064b3ffb87c251
+19:05:46.732 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.util - Computed checksum for 9:0b84965780b822360f064b3ffb87c251: as 9ca6e48e03fb39123581dd5cc300628f
+19:05:46.733 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.util - Computed checksum for inputStream as 159bcc7483dd187586eb7c6fab90267e
+19:05:46.733 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.util - Computed checksum for 9:159bcc7483dd187586eb7c6fab90267e: as 1a6ea111553904134b98a555dec7775e
+19:05:46.733 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.command - Executing internal command changeExecListener
+19:05:46.733 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.command - Executing internal command update migrate
+19:05:46.739 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.changelog - Fast check found no un-run changesets
+19:05:46.739 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  liquibase.ui - Database is up to date, no changesets to execute
+19:05:46.739 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  liquibase.changelog - Reading from public.databasechangelog
+19:05:46.740 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.executor - Changelog query completed.
+19:05:46.742 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.report.ShowSummaryGenerator instance liquibase.report.StandardShowSummaryGenerator
+19:05:46.743 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  liquibase.util - UPDATE SUMMARY
+19:05:46.743 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  liquibase.util - Run:                          0
+19:05:46.743 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  liquibase.util - Previously run:               3
+19:05:46.743 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  liquibase.util - Filtered out:                 0
+19:05:46.743 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  liquibase.util - -------------------------------
+19:05:46.743 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  liquibase.util - Total change sets:            3
+19:05:46.743 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  liquibase.util - Update summary generated
+19:05:46.743 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  liquibase.command - Command execution complete
+19:05:46.744 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.analytics.AnalyticsListener instance liquibase.analytics.NoOpAnalyticsListener
+19:05:46.744 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.analytics.AnalyticsListener instance liquibase.analytics.LiquibaseAnalyticsListener
+19:05:46.744 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.analytics.devOverride found
+19:05:46.744 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.analytics.devOverride is using the default value of false
+19:05:46.744 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.analytics.configEndpointUrl found
+19:05:46.744 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.analytics.configEndpointUrl is using the default value of https://config.liquibase.com/analytics.yaml
+19:05:46.745 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.analytics.enabled found
+19:05:46.745 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.license.LicenseService instance liquibase.license.OSSLicenseService
+19:05:46.746 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.analytics.configCacheTimeoutMillis found
+19:05:46.746 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.analytics.configCacheTimeoutMillis is using the default value of 3600000
+19:05:46.746 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.servicelocator - Loaded liquibase.analytics.configuration.AnalyticsConfiguration instance liquibase.analytics.configuration.LiquibaseRemoteAnalyticsConfiguration
+19:05:46.746 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.analytics.logLevel found
+19:05:46.746 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.analytics.logLevel is using the default value of OFF
+19:05:46.779 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - No configuration value for liquibase.analytics.configEndpointTimeoutMillis found
+19:05:46.779 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] DEBUG liquibase.configuration - Configuration liquibase.analytics.configEndpointTimeoutMillis is using the default value of 1500
+19:05:47.529 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+19:05:47.546 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.13.Final
+19:05:47.556 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+19:05:47.637 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+19:05:47.652 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:05:47.657 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.20
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:05:47.772 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:05:47.774 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:05:47.890 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:05:48.047 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+19:05:48.054 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+19:05:48.058 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.boot.SpringApplication - Started application in 2.276 seconds (process running for 2.534)
+8664,452 ops/s
+# Warmup Iteration   2: 9058,861 ops/s
+# Warmup Iteration   3: 9251,043 ops/s
+# Warmup Iteration   4: 9205,896 ops/s
+# Warmup Iteration   5: 9226,153 ops/s
+Iteration   1: 9237,434 ops/s
+Iteration   2: 9255,001 ops/s
+Iteration   3: 9214,343 ops/s
+Iteration   4: 9258,586 ops/s
+Iteration   5: 19:07:28.252 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+19:07:28.255 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+19:07:28.256 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+19:07:28.256 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+19:07:28.370 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+19:07:28.372 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:07:28.373 [benchmark.FindUrlRedisBenchmark.RedisState.run-jmh-worker-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+8977,587 ops/s
+
+
+Result "benchmark.FindUrlRedisBenchmark.RedisState.run":
+  9188,590 ±(99.9%) 459,184 ops/s [Average]
+  (min, avg, max) = (8977,587, 9188,590, 9258,586), stdev = 119,249
+  CI (99.9%): [8729,406, 9647,774] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:01:44
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                              Mode  Cnt     Score     Error  Units
+FindUrlRedisBenchmark.RedisState.run  thrpt    5  9188,590 ± 459,184  ops/s
+
+Process finished with exit code 0

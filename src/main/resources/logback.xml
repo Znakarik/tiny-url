@@ -1,0 +1,34 @@
+<!-- src/main/resources/logback-benchmark.xml -->
+<configuration>
+    <timestamp key="bySecond" datePattern="yyyy-MM-dd'T'HH-mm.ss"/>
+    <property name="PID" value="${PID:-}" />
+
+    <!-- JMH перехватывает консоль, поэтому логируем в файл и в память -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+<!--        <file>target/tiny-url-${bySecond}-${PID}.log</file>-->
+        <file>/Users/olga/Downloads/logs/tiny-url-${bySecond}-${PID}.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="Console"/>
+    </root>
+<!--    <root level="INFO">-->
+<!--        <appender-ref ref="FILE"/>-->
+<!--        <appender-ref ref="Console"/>-->
+<!--    </root>-->
+<!--    <root level="DEBUG">-->
+<!--        <appender-ref ref="FILE"/>-->
+<!--        <appender-ref ref="Console"/>-->
+<!--    </root>-->
+
+    <logger name="ru.znakarik" level="DEBUG"/>
+</configuration>

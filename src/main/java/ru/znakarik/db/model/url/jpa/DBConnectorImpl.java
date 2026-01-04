@@ -14,40 +14,32 @@ public class DBConnectorImpl implements DBConnector {
     private String url;
 
     public <T> T execute(String sql, Function<ResultSet, T> processResultFunction) {
-        log.info("[execute statement] = {}", sql);
-        Optional<ResultSet> result = executeSql(sql);
-        return result.map(processResultFunction)
-                .orElse(null);
+        log.debug("[execute statement] = {}", sql);
+        Optional<T> result = executeSql(sql, processResultFunction);
+        return result.orElse(null);
     }
 
-    private Optional<ResultSet> executeSql(String sql) {
-        if (sql.startsWith("insert") || sql.startsWith("INSERT")) {
-            execute(sql);
+    private <T> Optional<T> executeSql(String sql, Function<ResultSet, T> processResultFunction) {
+        if (isVoid(sql)) {
+            try (Connection conn = DriverManager.getConnection(url, new Properties())) {
+                Statement statement = conn.createStatement();
+                statement.execute(sql);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
             return Optional.empty();
         } else {
-            return Optional.ofNullable(executeWithResultSet(sql));
+            try (Connection conn = DriverManager.getConnection(url, new Properties())) {
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+                return Optional.ofNullable(processResultFunction.apply(resultSet));
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
-    private void execute(String sql) {
-        Properties properties = new Properties();
-        try (Connection conn = DriverManager.getConnection(url, properties)) {
-            Class.forName("org.postgresql.Driver");
-            Statement statement = conn.createStatement();
-            statement.execute(sql);
-        } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    private ResultSet executeWithResultSet(String sql) {
-        Properties properties = new Properties();
-        try (Connection conn = DriverManager.getConnection(url, properties)) {
-            Class.forName("org.postgresql.Driver");
-            Statement statement = conn.createStatement();
-            return statement.executeQuery(sql);
-        } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
-        }
+    private boolean isVoid(String sql) {
+        return sql.startsWith("TRUNCATE") || sql.startsWith("insert") || sql.startsWith("INSERT");
     }
 }

@@ -1,6 +1,7 @@
 package ru.znakarik.repository.cache;
 
 import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import ru.znakarik.db.model.url.UrlPOJO;
@@ -10,6 +11,7 @@ import ru.znakarik.repository.UrlRepository;
 import java.text.ParseException;
 import java.util.*;
 
+@Slf4j
 public class RedisUrlRepository implements UrlRepository {
     private static final String URL_KEY = "Url";
     private static final String REDIRECTS_KEY = "Redirect";
@@ -22,7 +24,7 @@ public class RedisUrlRepository implements UrlRepository {
     }
 
     @PostConstruct
-    private void init() {
+    void init() {
         hashOperations = redisTemplate.opsForHash();
     }
 

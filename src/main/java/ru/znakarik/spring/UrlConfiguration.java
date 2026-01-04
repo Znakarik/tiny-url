@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import org.springframework.core.env.Environment;
 import org.springframework.data.redis.connection.MessageListener;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
@@ -23,6 +23,8 @@ import ru.znakarik.repository.cache.MessageSubscriber;
 import ru.znakarik.repository.cache.RedisUrlRepository;
 import ru.znakarik.service.*;
 
+import java.util.Objects;
+
 @Configuration
 public class UrlConfiguration {
 
@@ -38,14 +40,16 @@ public class UrlConfiguration {
     }
 
     @Bean
-    public UrlRepository postgreUrlRepository(DBConnector jpaRepository) {
-        return new PostgreUrlRepository(jpaRepository);
-    }
-
-    @Bean
-    @Primary
-    public UrlRepository redisUrlRepository(RedisTemplate<String, Object> redisTemplate) {
-        return new RedisUrlRepository(redisTemplate);
+    public UrlRepository urlRepository(Environment env,
+                                       RedisTemplate<String, Object> redisTemplate,
+                                       DBConnector jpaRepository) {
+        String repoType = env.getProperty("url.repo.type");
+        Objects.requireNonNull("repoType не может быть null");
+        return switch (repoType) {
+            case "postgres" -> new PostgreUrlRepository(jpaRepository);
+            case "redis" -> new RedisUrlRepository(redisTemplate);
+            default -> throw new RuntimeException("Неизвестный тип репо урлов = " + repoType);
+        };
     }
 
     @Bean

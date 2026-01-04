@@ -1,0 +1,50 @@
+Index: src/test/java/ru/znakarik/controller/BenchmarkTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/ru/znakarik/controller/BenchmarkTest.java b/src/test/java/ru/znakarik/controller/BenchmarkTest.java
+new file mode 100644
+--- /dev/null	(date 1767443390228)
++++ b/src/test/java/ru/znakarik/controller/BenchmarkTest.java	(date 1767443390228)
+@@ -0,0 +1,40 @@
++package ru.znakarik.controller;
++
++import org.openjdk.jmh.annotations.Benchmark;
++import org.openjdk.jmh.annotations.Scope;
++import org.openjdk.jmh.annotations.Setup;
++import org.openjdk.jmh.annotations.State;
++import org.openjdk.jmh.runner.Runner;
++import org.openjdk.jmh.runner.RunnerException;
++import org.openjdk.jmh.runner.options.Options;
++import org.openjdk.jmh.runner.options.OptionsBuilder;
++
++import java.io.IOException;
++
++public class BenchmarkTest {
++
++    public static void main(String[] args) throws IOException, RunnerException {
++        Options opt = new OptionsBuilder()
++                .include(BenchmarkTest.class.getSimpleName())
++                .build();
++
++        new Runner(opt).run();
++    }
++
++    @State(Scope.Thread)
++     public static class UnderTestClass {
++        private Integer a;
++        private Integer b;
++
++        @Setup
++        public void setup() {
++            a = Integer.valueOf(7);
++            b = Integer.valueOf(3);
++        }
++
++        @Benchmark
++        public int plus() {
++            return a + b;
++        }
++    }
++}

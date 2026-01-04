@@ -102,12 +102,22 @@ public class PostgreUrlRepository implements UrlRepository {
 
     @Override
     public void clearUrls() {
-        throw new RuntimeException("Not implemented yet");
+        String statement = "TRUNCATE TABLE urls;";
+        try {
+            dbConnector.execute(statement, resultSet -> null);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
     public void clearRedirects() {
-        throw new RuntimeException("Not implemented yet");
+        String statement = "TRUNCATE TABLE url_redirects;";
+        try {
+            dbConnector.execute(statement, resultSet -> null);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
