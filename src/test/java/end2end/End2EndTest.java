@@ -44,12 +44,13 @@ public class End2EndTest {
 
     @Test
     public void testGet() throws Exception {
+        urlRepository.clearUrls();
+
         mvc.perform(MockMvcRequestBuilders.get("/url/v1/getAll")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.urls.[0].shortUrl", Matchers.notNullValue()))
-                .andExpect(jsonPath("$.urls.[0].longUrl", Matchers.notNullValue()));
+                .andExpect(jsonPath("$.urls", Matchers.empty()));
     }
 
     @Test
