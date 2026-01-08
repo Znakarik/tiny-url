@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create URL</title>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+</head>
+<body>
+
+<h2>Введите URL</h2>
+
+<!--<form-->
+<!--        hx-post="/url/v1/create"-->
+<!--        hx-trigger="submit"-->
+<!--        hx-target="#result"-->
+<!--        hx-swap="innerHTML"-->
+<!--        hx-encoding="json">-->
+
+<!--    <input type="text"-->
+<!--           name="longUrl"-->
+<!--           placeholder="https://example.com"-->
+<!--           required />-->
+
+<!--    <button type="submit">Создать</button>-->
+<!--</form>-->
+
+<form id="urlForm">
+    <p>URL: <input type="text" id="longUrl" placeholder="https://example.com" required/></p>
+    <p>
+        <button type="submit">Создать</button>
+    </p>
+</form>
+
+<div id="result"></div>
+<script>
+    const form = document.getElementById('urlForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // предотвратить стандартную отправку формы
+
+        const jsonData = {
+            longUrl: document.getElementById('longUrl').value
+        };
+
+        fetch('/url/v1/create', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(jsonData)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Сервер вернул ошибку: ' + response.status);
+            }
+            return response.json(); // сначала парсим JSON
+        })
+        .then(data => {
+            // теперь data — это объект JSON из ответа сервера
+            console.log(data);
+
+            if (data.url && data.url.shortUrl) {
+                document.getElementById('result').innerHTML = `
+                    <p>Короткий URL создан:</p>
+                    <a href="${data.url.shortUrl}" target="_blank">${data.url.shortUrl}</a>
+                `;
+            } else {
+                document.getElementById('result').innerText = 'Не удалось получить shortUrl из ответа';
+            }
+        })
+        .catch(error => {
+            console.error('Ошибка:', error);
+            document.getElementById('result').innerText = 'Ошибка при создании короткого URL';
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -21,6 +21,10 @@
         <appender-ref ref="FILE"/>
         <appender-ref ref="Console"/>
     </root>
+<!--    <root level="TRACE">-->
+<!--        <appender-ref ref="FILE"/>-->
+<!--        <appender-ref ref="Console"/>-->
+<!--    </root>-->
 <!--    <root level="INFO">-->
 <!--        <appender-ref ref="FILE"/>-->
 <!--        <appender-ref ref="Console"/>-->
