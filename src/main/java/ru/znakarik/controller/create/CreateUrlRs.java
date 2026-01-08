@@ -9,6 +9,7 @@ import ru.znakarik.controller.Url;
 @AllArgsConstructor
 @Builder
 @Getter
+//@Setter
 @Jacksonized
 public class CreateUrlRs {
     private final Url url;
