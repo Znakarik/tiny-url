@@ -1,10 +1,12 @@
-package ru.znakarik.repository;
+package ru.znakarik.repository.postgre;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import ru.znakarik.db.model.url.UrlPOJO;
 import ru.znakarik.db.model.url.UrlRedirectPOJO;
 import ru.znakarik.db.model.url.jpa.DBConnector;
+import ru.znakarik.repository.ConvertFunctions;
+import ru.znakarik.repository.UrlRepository;
 
 import java.sql.SQLException;
 import java.util.Collection;
@@ -53,7 +55,7 @@ public class PostgreUrlRepository implements UrlRepository {
     public String create(String id, String longUrl, String shortUrl, String dateTime) {
         String createStatement = String.format("INSERT INTO " +
                         "urls (id, short_url, long_url, create_date_time)" +
-                        " VALUES ('%s', '%s', '%s', '%s') RETURNING id;",
+                        " VALUES ('%s', '%s', '%s', '%s');",
                 id, shortUrl, longUrl, dateTime);
         try {
             dbConnector.execute(createStatement, resultSet -> null);
@@ -67,7 +69,7 @@ public class PostgreUrlRepository implements UrlRepository {
     public void createNewRedirect(String redirectId, String urlId, String dateTime) {
         String createStatement = String.format("INSERT INTO " +
                         "url_redirects (id, url_id, create_date_time)" +
-                        " VALUES ('%s', '%s', '%s') RETURNING id;",
+                        " VALUES ('%s', '%s', '%s');",
                 redirectId, urlId, dateTime);
         try {
             dbConnector.execute(createStatement, resultSet -> null);

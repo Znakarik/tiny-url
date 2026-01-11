@@ -6,6 +6,7 @@ import org.mockito.ArgumentCaptor;
 import ru.znakarik.db.model.url.UrlPOJO;
 import ru.znakarik.db.model.url.UrlRedirectPOJO;
 import ru.znakarik.db.model.url.jpa.DBConnector;
+import ru.znakarik.repository.postgre.PostgreUrlRepository;
 
 import java.sql.SQLException;
 import java.util.Collection;

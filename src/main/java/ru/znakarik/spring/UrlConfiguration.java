@@ -15,7 +15,7 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import ru.znakarik.db.model.url.jpa.DBConnector;
 import ru.znakarik.db.model.url.jpa.DBConnectorImpl;
-import ru.znakarik.repository.PostgreUrlRepository;
+import ru.znakarik.repository.postgre.PostgreUrlRepository;
 import ru.znakarik.repository.UrlRepository;
 import ru.znakarik.repository.cache.MessagePublisher;
 import ru.znakarik.repository.cache.MessagePublisherImpl;
