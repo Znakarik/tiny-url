@@ -3,7 +3,7 @@ package ru.znakarik.service;
 import org.springframework.beans.factory.annotation.Value;
 
 public class UrlGeneratorServiceImpl implements UrlGeneratorService {
-    @Value("${base.url}")
+    @Value("${base.url.path}")
     private String baseUrl;
     @Value("${url.prefix}")
     private String prefix;
